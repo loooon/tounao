@@ -7,14 +7,23 @@ import (
 	"bytes"
 	"os/exec"
 	"net"
+	"os"
 )
 
 var segmenter sego.Segmenter
 
+var segoEnable = false
 var Auto = false
 
 func init() {
-	segmenter.LoadDictionary("vendor/github.com/huichen/sego/data/dictionary.txt")
+	if _, err := os.Stat("vendor/github.com/huichen/sego/data/dictionary.txt"); os.IsNotExist(err) {
+		segoEnable = false
+		log.Println("分词权重未启用")
+	} else {
+		log.Println("分词权重已启用")
+		segoEnable = true
+		segmenter.LoadDictionary("vendor/github.com/huichen/sego/data/dictionary.txt")
+	}
 }
 
 func Check(e error) (bool) {
@@ -26,8 +35,12 @@ func Check(e error) (bool) {
 }
 
 func Split(str string) []string {
-	segments := segmenter.Segment([]byte(str))
-	return sego.SegmentsToSlice(segments, true)
+	if segoEnable {
+		segments := segmenter.Segment([]byte(str))
+		return sego.SegmentsToSlice(segments, true)
+	} else {
+		return make([]string, 0)
+	}
 }
 
 func RunWithAdb(args ...string) {
