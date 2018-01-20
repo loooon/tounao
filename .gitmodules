@@ -1,9 +1,3 @@
-[submodule "vendor/goproxy"]
-	path = vendor/goproxy
-	url = git@github.com:elazarl/goproxy.git
-[submodule "vendor/github.com/elazarl/goproxy"]
-	path = vendor/github.com/elazarl/goproxy
-	url = git@github.com:elazarl/goproxy.git
 [submodule "vendor/github.com/huichen/sego"]
 	path = vendor/github.com/huichen/sego
 	url = git@github.com:huichen/sego.git
