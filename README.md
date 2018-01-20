@@ -28,7 +28,8 @@ git submodule update
 
 
 # 问题
-1. goproxy 无法代理 websocket 导致IOS无法使用代理进入游戏，希望各路大神能提供建议
+感谢 [Asura][2] 的PR
+～～～1. goproxy 无法代理 websocket 导致IOS无法使用代理进入游戏，希望各路大神能提供建议～～～
 
 # 想法
 在业余时间完成这些小东西的时候，更多的是为了保持一份热情，缓解繁琐业务编码中的一些疲惫
@@ -49,6 +50,7 @@ git submodule update
 
 
 [1]: (https://github.com/wansir/tounao/releases)
+[2]: (https://github.com/luodaoyi)
 
 
 
