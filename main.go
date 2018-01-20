@@ -4,16 +4,16 @@ import (
 	"github.com/coreos/goproxy"
 	"net/http"
 	"log"
-	"tounao/util"
 	"fmt"
 	"os"
 	"os/signal"
 	"syscall"
 	"io/ioutil"
 	"bytes"
-	"tounao/lib"
 	"flag"
 	"strconv"
+	"github.com/wansir/tounao/lib"
+	"github.com/wansir/tounao/util"
 )
 
 var (

@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"github.com/coreos/goproxy"
 	"fmt"
-	"tounao/util"
 	"time"
+	"github.com/wansir/tounao/util"
 )
 
 var questions = make(map[string]Question)
