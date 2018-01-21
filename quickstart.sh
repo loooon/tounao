@@ -9,6 +9,6 @@ else
  cd  $GOPATH/src/github.com/wansir/tounao
  git submodule init
  git submodule update
- go run main go
+ go run main.go
 
 fi
