@@ -5,8 +5,8 @@ if [ ! -n $GOPATH ]; then
 else
 
  echo "当前路径$GOPATH"
- git clone git@github.com:wansir/tounao.git $GOPATH/src/github.com/wansir/tounao
- cd  $GOPATH/src/github.com/wansir/tounao
+ git clone git@github.com:loooon/tounao.git $GOPATH/src/github.com/loooon/tounao
+ cd  $GOPATH/src/github.com/loooon/tounao
  git submodule init
  git submodule update
  go run main.go
